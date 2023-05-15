@@ -21,6 +21,9 @@ function App() {
 
   function handleComplete(id) {
     console.log("tamamlama fonksiyonunu buraya yazın")
+    const kopyaTasks = [...tasks];
+    const tamamlandi = (kopyaTasks.find((task) => task.id === id).status = "yapıldı");
+    setTasks(kopyaTasks);
   }
 
   return (
